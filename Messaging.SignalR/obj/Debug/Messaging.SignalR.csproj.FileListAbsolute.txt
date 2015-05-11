@@ -1,0 +1,15 @@
+D:\Source\MicrosoftMessageBridge\Messaging.SignalR\bin\Debug\EventSemantics.Messaging.SignalR.dll
+D:\Source\MicrosoftMessageBridge\Messaging.SignalR\bin\Debug\EventSemantics.Messaging.SignalR.pdb
+D:\Source\MicrosoftMessageBridge\Messaging.SignalR\bin\Debug\EventSemantics.Messaging.Shared.dll
+D:\Source\MicrosoftMessageBridge\Messaging.SignalR\bin\Debug\Microsoft.AspNet.SignalR.Client.dll
+D:\Source\MicrosoftMessageBridge\Messaging.SignalR\bin\Debug\Newtonsoft.Json.dll
+D:\Source\MicrosoftMessageBridge\Messaging.SignalR\bin\Debug\Microsoft.Practices.Unity.dll
+D:\Source\MicrosoftMessageBridge\Messaging.SignalR\bin\Debug\Microsoft.Practices.Unity.Configuration.dll
+D:\Source\MicrosoftMessageBridge\Messaging.SignalR\bin\Debug\EventSemantics.Messaging.Shared.pdb
+D:\Source\MicrosoftMessageBridge\Messaging.SignalR\bin\Debug\Microsoft.AspNet.SignalR.Client.xml
+D:\Source\MicrosoftMessageBridge\Messaging.SignalR\bin\Debug\Newtonsoft.Json.xml
+D:\Source\MicrosoftMessageBridge\Messaging.SignalR\bin\Debug\Microsoft.Practices.Unity.xml
+D:\Source\MicrosoftMessageBridge\Messaging.SignalR\bin\Debug\Microsoft.Practices.Unity.Configuration.xml
+D:\Source\MicrosoftMessageBridge\Messaging.SignalR\obj\Debug\Messaging.SignalR.csprojResolveAssemblyReference.cache
+D:\Source\MicrosoftMessageBridge\Messaging.SignalR\obj\Debug\EventSemantics.Messaging.SignalR.dll
+D:\Source\MicrosoftMessageBridge\Messaging.SignalR\obj\Debug\EventSemantics.Messaging.SignalR.pdb

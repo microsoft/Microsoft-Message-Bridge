@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{23B92B2D-AB18-4882-AD4A-1C7FEF95CE66}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Microsoft.Support.MessageBridge.Messaging.Tool</RootNamespace>
+    <AssemblyName>MessagingTool</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CommandLine">
+      <HintPath>..\packages\CommandLineParser.1.9.71\lib\net45\CommandLine.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BridgeHandler.cs" />
+    <Compile Include="BridgeOptions.cs" />
+    <Compile Include="ColorContext.cs" />
+    <Compile Include="ColoredConsoleTraceListener.cs" />
+    <Compile Include="CommandLineOptions.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PublicationHandler.cs" />
+    <Compile Include="PublicationOptions.cs" />
+    <Compile Include="SubscriptionHandler.cs" />
+    <Compile Include="SubscriptionOptions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Messaging.AzureEventHub\Messaging.AzureEventHub.csproj">
+      <Project>{54072b95-0f7c-467d-9f15-00433c9b3dc3}</Project>
+      <Name>Messaging.AzureEventHub</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Messaging.AzureServiceBus\Messaging.AzureServiceBus.csproj">
+      <Project>{68eca498-205b-44cf-9886-5c4128fde9bf}</Project>
+      <Name>Messaging.AzureServiceBus</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Messaging.Shared\Messaging.Shared.csproj">
+      <Project>{b5aadf5e-db4a-4790-ae9b-99797f99770b}</Project>
+      <Name>Messaging.Shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Messaging\Messaging.csproj">
+      <Project>{2b9e0c1c-6b77-41ae-a9ae-8beec649bdc0}</Project>
+      <Name>Messaging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Monitoring.Debug\Monitoring.Debug.csproj">
+      <Project>{0336c200-e72f-4993-8503-8366ad76fd7c}</Project>
+      <Name>Monitoring.Debug</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Monitoring\Monitoring.csproj">
+      <Project>{13b07ae8-8e76-49a1-823a-c55e08be1d51}</Project>
+      <Name>Monitoring</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Sample\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{13B07AE8-8E76-49A1-823A-C55E08BE1D51}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Microsoft.Support.MessageBridge.Monitoring</RootNamespace>
+    <AssemblyName>EventSemantics.Monitoring</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>Properties\Messaging.Monitoring.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.Unity, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration">
+      <HintPath>..\packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.RegistrationByConvention">
+      <HintPath>..\packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.RegistrationByConvention.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.ServiceRuntime, Version=2.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\Program Files\Microsoft SDKs\Azure\.NET SDK\v2.5\bin\runtimes\base\Microsoft.WindowsAzure.ServiceRuntime.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActivityListenerBase.cs" />
+    <Compile Include="ActivityTracker.cs" />
+    <Compile Include="BeginEventArgs.cs" />
+    <Compile Include="BridgeClosedEventArgs.cs" />
+    <Compile Include="BridgeClosingEventArgs.cs" />
+    <Compile Include="BridgeInitializedEventArgs.cs" />
+    <Compile Include="BridgeInitializingEventArgs.cs" />
+    <Compile Include="BridgeTransferredEventArgs.cs" />
+    <Compile Include="BridgeTransferringEventArgs.cs" />
+    <Compile Include="EndEventArgs.cs" />
+    <Compile Include="ActivityMonitor.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="IActivityListener.cs" />
+    <Compile Include="IActivityMonitor.cs" />
+    <Compile Include="IMessagingActivityMonitor.cs" />
+    <Compile Include="MessageBusClosedEventArgs.cs" />
+    <Compile Include="MessageBusClosingEventArgs.cs" />
+    <Compile Include="MessageBusRegisteredHandlerEventArgs.cs" />
+    <Compile Include="MessageBusRegisteringHandlerEventArgs.cs" />
+    <Compile Include="MessageBusSendingEventArgs.cs" />
+    <Compile Include="MessageBusSentEventArgs.cs" />
+    <Compile Include="MessagingExceptionEventArgs.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PublisherClosedEventArgs.cs" />
+    <Compile Include="PublisherClosingEventArgs.cs" />
+    <Compile Include="PublisherInitializedEventArgs.cs" />
+    <Compile Include="PublisherInitializingEventArgs.cs" />
+    <Compile Include="PublisherSendingEventArgs.cs" />
+    <Compile Include="PublisherSentEventArgs.cs" />
+    <Compile Include="SubscriberClosedEventArgs.cs" />
+    <Compile Include="SubscriberClosingEventArgs.cs" />
+    <Compile Include="SubscriberInitializedEventArgs.cs" />
+    <Compile Include="SubscriberInitializingEventArgs.cs" />
+    <Compile Include="SubscriberMessageCountEventArgs.cs" />
+    <Compile Include="SubscriberReceivedEventArgs.cs" />
+    <Compile Include="SubscriberReceivingEventArgs.cs" />
+    <Compile Include="WorkerCompletedEventArgs.cs" />
+    <Compile Include="WorkerRunningEventArgs.cs" />
+    <Compile Include="WorkerStartedEventArgs.cs" />
+    <Compile Include="WorkerStartingEventArgs.cs" />
+    <Compile Include="WorkerStoppedEventArgs.cs" />
+    <Compile Include="WorkerStoppingEventArgs.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Properties\Messaging.Monitoring.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Messaging.Shared\Messaging.Shared.csproj">
+      <Project>{b5aadf5e-db4a-4790-ae9b-99797f99770b}</Project>
+      <Name>Messaging.Shared</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
